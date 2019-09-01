@@ -27,7 +27,7 @@ public class HouseState implements ContractState {
 
     public static void main(String[] args){
         Party joel = null;
-        HouseState state = new HouseState("Calle 24, Colonia Fernando Novelo", joel);
+        HouseState state = new HouseState("Neightborhud", null);
     }
 
     @NotNull

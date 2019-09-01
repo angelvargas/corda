@@ -4,6 +4,7 @@ import net.corda.core.contracts.BelongsToContract;
 import net.corda.core.contracts.ContractState;
 import net.corda.core.identity.AbstractParty;
 import net.corda.core.identity.Party;
+import net.corda.core.serialization.CordaSerializable;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.List;
 /* Our state, defining a shared fact on the ledger.
  * See src/main/java/examples/ArtState.java for an example. */
 @BelongsToContract(bootcamp.TokenContract.class)
+@CordaSerializable
 public class TokenState implements ContractState{
     private Party issuer;
     private Party owner;
