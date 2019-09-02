@@ -81,6 +81,6 @@ public class HouseContract implements Contract {
             throw new IllegalArgumentException("Command type not recognized");
         }
     }
-    public class Register implements CommandData{}
-    public class Transfer implements CommandData{}
+    public static class Register implements CommandData{}
+    public static class Transfer implements CommandData{}
 }
