@@ -17,8 +17,7 @@ public class TwoPartyFlow extends FlowLogic<Integer> {
     public Integer call() throws FlowException {
         FlowSession session = initiateFlow(counterparty);
         session.send(1);
-        int receivedIncremendInteger  = session.receive(Integer.class).unwrap(it->it):
+        int receivedIncremendInteger  = session.receive(Integer.class).unwrap(it->it);
         return receivedIncremendInteger;
-        return null;
     }
 }
