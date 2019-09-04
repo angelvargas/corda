@@ -42,9 +42,7 @@ public class TokenContract implements Contract {
         if(!(requiredSigners.contains(issuerKey)))
             throw new IllegalArgumentException("Issuer must be required signer");
 
-
     }
-
 
     public interface Commands extends CommandData {
         class Issue implements Commands { }

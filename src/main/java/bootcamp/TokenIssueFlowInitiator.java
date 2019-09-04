@@ -14,13 +14,12 @@ import static java.util.Collections.singletonList;
 public class TokenIssueFlowInitiator extends FlowLogic<SignedTransaction> {
     private final Party owner;
     private final int amount;
+    private final ProgressTracker progressTracker = new ProgressTracker();
 
     public TokenIssueFlowInitiator(Party owner, int amount) {
         this.owner = owner;
         this.amount = amount;
     }
-
-    private final ProgressTracker progressTracker = new ProgressTracker();
 
     @Override
     public ProgressTracker getProgressTracker() {
