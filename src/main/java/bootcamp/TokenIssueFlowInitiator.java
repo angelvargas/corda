@@ -49,7 +49,8 @@ public class TokenIssueFlowInitiator extends FlowLogic<SignedTransaction> {
         TransactionBuilder transactionBuilder = new TransactionBuilder();
         transactionBuilder.setNotary(notary);
         transactionBuilder.addOutputState(tokenState, TokenContract.ID);
-        transactionBuilder.addCommand(command, issuer.getOwningKey());
+        transactionBuilder.addCommand(command, issuer.getOwningKey(), owner.getOwningKey());
+        //transactionBuilder.addCommand(command, owner.getOwningKey());
 
         /* ============================================================================
          *          TODO 2 - Write our TokenContract to control token issuance!
